@@ -298,7 +298,7 @@ const Add: React.FC<AddProps> = ({ userId, onAddExpense }) => {
     
     return (
         <>
-            <button onClick={toggleContent} className="h-16 w-16 fixed bottom-10 right-12 bg-gray-500 rounded-full hover:bg-gray-600 focus: outline-none transition-transform duration-200 ease-out active:scale-95">
+            <button onClick={toggleContent} className="h-16 w-16 fixed bottom-10 right-8 bg-gray-500 rounded-full hover:bg-gray-600 focus: outline-none transition-transform duration-200 ease-out active:scale-95">
             <Image
                 className="p-2"
                 src="/add.svg"
@@ -345,5 +345,6 @@ const Add: React.FC<AddProps> = ({ userId, onAddExpense }) => {
         </>
     )
 }
+
 
 export default Add
