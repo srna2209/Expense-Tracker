@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react";
+import React from "react";
 import Add from "../../components/Add";
 import Items from "./Items";
 import { Expense } from "../../page";
@@ -29,3 +29,4 @@ const ExpenseList: React.FC<ExpenseListProps> = ({userId, expenses, onAddExpense
 }
 
 export default ExpenseList;
+
