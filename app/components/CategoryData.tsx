@@ -10,7 +10,7 @@ type CategoryOtherSummary = {
 }
 
 function calculateTotalAndPercentage(summary: CategoryOtherSummary){
-    Object.entries(summary).forEach(([_, categories]) => {
+    Object.values(summary).forEach(categories => {
         const total = Object.values(categories).reduce((sum, c) => sum + c.amount, 0);
 
         Object.values(categories).forEach(cat => {
@@ -218,4 +218,5 @@ export function getExpensebyCategory (expenses : Expense[]){
     );
 
     return sortedExpenseByCategory;
+
 }
