@@ -67,7 +67,7 @@ export function balanceData ( expenses : Expense[]) {
         datasets: [
         {
             label: "Balance",
-            data: (Object.entries(sevenDaysBalance).map(([_, { balance }]) => {
+            data: (Object.values(sevenDaysBalance).map(({ balance }) => {
                 runningBalance += balance;
             return runningBalance;
             })),
@@ -116,7 +116,7 @@ export function expenseData ( expenses : Expense[]) {
         datasets: [
         {
             label: "Income",
-            data: (Object.entries(sevenDaysExpense).map(([_, { income }]) => {
+            data: (Object.values(sevenDaysExpense).map(({ income }) => {
               return income;
             })),
             borderColor: "#16a34a",
@@ -137,4 +137,5 @@ export function expenseData ( expenses : Expense[]) {
         },
     ],
   };
+
 }
