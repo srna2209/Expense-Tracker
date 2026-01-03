@@ -83,7 +83,7 @@ export default function TrackByCategory({ expenses }: {userId:string, expenses: 
                     <div className="w-full mb-3 bg-gray-600 text-white flex flex-row justify-center">
                         <div className="w-2/4 pl-2 py-2 border border-gray-300">Category</div>
                         <div className="w-1/4 pl-2 py-2 border border-gray-300">Amount</div>
-                        <div className="w-1/4 pl-2 py-2 border border-gray-300">Percentage</div>
+                        <div className="w-1/4 pl-1 py-2 border border-gray-300">Percentage</div>
                     </div>
                     <div className="w-full flex flex-col items-center max-h-[380px] overflow-y-auto">
                     {(option === "Income")?
@@ -201,3 +201,4 @@ export default function TrackByCategory({ expenses }: {userId:string, expenses: 
     )
 
 }
+
