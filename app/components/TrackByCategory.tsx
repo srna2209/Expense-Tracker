@@ -14,11 +14,11 @@ const sortDesc = (categoryExpenses: CategoryExpense[]): CategoryExpense[] => {
     });
 }
 
-export default function TrackByCategory({ userId, expenses }: {userId:string, expenses: Expense[]}){
+export default function TrackByCategory({ expenses }: {userId:string, expenses: Expense[]}){
     const [ option, setOption ] = useState<"Income" | "Expense">("Income");
     const [ filterOption, setFilterOption ] = useState<"All" | "Daily" | "Weekly" | "Monthly" | "Yearly">("All");
 
-    const { totalIncome, totalExpenses, netBalance } = balance(expenses);
+    const { totalIncome, totalExpenses } = balance(expenses);
     const incomeByCategory = sortDesc(getIncomebyCategory(expenses));
     const expenseByCategory = sortDesc(getExpensebyCategory(expenses));
 
@@ -199,4 +199,5 @@ export default function TrackByCategory({ userId, expenses }: {userId:string, ex
             </div>
         </div>
     )
+
 }
