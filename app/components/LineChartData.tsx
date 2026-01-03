@@ -127,7 +127,7 @@ export function expenseData ( expenses : Expense[]) {
 
         {
             label: "Expense",
-            data: (Object.values(sevenDaysExpense).map(({ expense })) => {
+            data: (Object.values(sevenDaysExpense).map(({ expense }) => {
               return expense;
             })),
             borderColor: "#dc2626",
@@ -139,6 +139,7 @@ export function expenseData ( expenses : Expense[]) {
   };
 
 }
+
 
 
 
