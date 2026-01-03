@@ -34,9 +34,6 @@ const All = ({ userId } : {userId: string}) => {
         fetchExpenses();
     },[fetchExpenses]);
 
-    useEffect(() => {
-        fetchExpenses();
-    },[])
 
     return (
       <div className="w-full bg-gray-200 flex flex-col items-center min-h-screen">
@@ -45,3 +42,4 @@ const All = ({ userId } : {userId: string}) => {
   );
 }
 export default All
+
