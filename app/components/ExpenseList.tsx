@@ -1,0 +1,33 @@
+'use client'
+import React from "react";
+import Add from "./Add";
+import Items from "./Items";
+import { Expense } from "../page";
+
+type ExpenseListProps = {
+    userId: string;
+    expenses: Expense[];
+    onAddExpense: (expense: Expense) => void;
+    onUpdateExpense: (expense: Expense) => void;
+    onDeleteExpense: (_id: string) => void;
+};
+
+let currentRunningBalance = 0;
+
+const ExpenseList: React.FC<ExpenseListProps> = ({userId, expenses, onAddExpense, onUpdateExpense, onDeleteExpense})=> {
+
+    return (
+        <>
+            <Add userId={userId} onAddExpense={onAddExpense} />
+            <Items
+                userId={userId}
+                expenses={expenses}
+                onUpdate={onUpdateExpense}
+                onDelete={onDeleteExpense}
+                runningBalance={currentRunningBalance}
+            />
+        </>
+    )
+}
+
+export default ExpenseList;
